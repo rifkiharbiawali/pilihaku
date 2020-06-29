@@ -7,8 +7,10 @@
         }else {
           header("location:" .BASE_URL."/index.php?");
         }
+        $id = $_SESSION['id'];
         $cekdata = mysqli_query($koneksi, "SELECT * FROM pengguna WHERE id=".$_SESSION['id']);
         $cektabel = mysqli_query($koneksi, "SELECT * FROM nama_tabel WHERE id=".$_SESSION['id']);
+        $tabelcp = mysqli_query($koneksi, "SELECT * FROM cp$id");
         $data = mysqli_fetch_assoc($cekdata);
         $tabel = mysqli_fetch_assoc($cektabel);
  ?>
@@ -58,27 +60,27 @@
                 </div>
               </form>";
       }else {
-        echo "<table class='ui unstackable table'>
+        echo "<table class='ui unstackable table'>";
+        echo "
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Pasangan Calon</th>
-                  <th>Visi Misi</th>
-                  <th>Edit</th>
+                  <th class='center aligned'>No</th>
+                  <th class='center aligned'>Pasangan Calon</th>
+                  <th class='center aligned'>Visi Misi</th>
+                  <th class='center aligned'>Edit</th>
                 </tr>
-              </thead>
-              <tbody>
+              </thead>";
+      while($cp=mysqli_fetch_assoc($tabelcp)) {
+        echo "<tbody>
                 <tr>
-                  <th>1</th>
-                  <th>Soekarno</th>
-                  <th>Memerdekan Bangsa dan mensejahterakannya</th>
-                  <th><button>Edit</button></th>
+                  <th class='center aligned'>$cp[no]</th>
+                  <th>$cp[nama_cp]</th>
+                  <th>$cp[visi_misi]</th>
+                  <th class='center aligned'><button>Edit</button></th>
                 </tr>
-              </tbody>
-
-
-              </table>
-              ";
+              </tbody>";
+        }
+        echo "</table>";
       }
        ?>
        <!-- <form class="ui form" action="function/proses_tambah.php" method="post" enctype="multipart/form-data">
