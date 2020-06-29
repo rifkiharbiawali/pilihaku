@@ -1,0 +1,69 @@
+img[alt="daun"] {
+  width: 100px;
+  margin: 150px auto 2px auto;
+  display: block;
+}
+img[alt="bulan"] {
+  width: 100px;
+  margin: 110px auto 2px auto;
+  display: block;
+}
+img[alt="pp"] {
+  width: 100px;
+  height: 100px;
+  margin: 2px auto 2px auto;
+  display: block;
+  border-radius: 100%;
+}
+.konten-form-login {
+  background-color: #2ecc71;
+  margin: 2px auto 2px auto;
+  width: 220px;
+  height: 148px;
+  border-radius: 7px;
+  text-align: center;
+  font-weight: lighter;
+}
+.konten-form-register {
+  background-color: #95a5a6;
+  margin: 2px auto 100px auto;
+  width: 220px;
+  height: 200px;
+  border-radius: 7px;
+  text-align: center;
+}
+.judul-tengah {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-top: 10px;
+  text-align: center;
+  font-family: sans-serif;
+  color: #ffffff
+}
+
+.input-form {
+  /*margin: 5px auto 5px 16px;*/
+  display: inline-block;
+  /*position: relative;*/
+  /*left: 9%;*/
+  margin-bottom: 10px;
+}
+
+.input-form span input[name="login"] {
+margin: 5px 5px 5px 15px;
+}
+.input-form span input[name="register-login"] {
+margin: auto 10px 5px auto;
+}
+.input-form span input[name="register-register"] {
+margin: 5px auto auto 3px;
+}
+label {
+  color: #ffffff;
+  font-family: sans-serif;
+
+}
+.profile {
+    margin-top: 150px;
+    text-align: center;
+}
