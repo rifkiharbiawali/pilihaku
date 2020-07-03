@@ -76,7 +76,8 @@
                   <th class='center aligned'>$cp[no]</th>
                   <th class='center aligned'>$cp[nama_cp]</th>
                   <th class='center aligned'>$cp[visi_misi]</th>
-                  <th class='center aligned'><a href='BASE_URL/index.php?page=tambah-cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Edit</button></a></th>
+                  <th class='center aligned'><a href='";
+                  echo BASE_URL."/index.php?page=edit-cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Edit</button></a></th>
                 </tr>
               </tbody>";
         }

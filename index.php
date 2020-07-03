@@ -37,6 +37,9 @@ if (isset($_GET['page'])) {
       case 'tambah-cp':
       include_once("$page.php");
       break;
+      case 'edit-cp':
+      include_once("$page.php");
+      break;
 
     default:
       include_once('eror.php');
