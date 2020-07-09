@@ -18,12 +18,7 @@
     <link rel="icon" href="img/favicon.png">
   </head>
   <body>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br>
     <center><img class="ui small image" src="img/daun.png" alt="daun"></center>
     <?php
         $notif = isset($_GET['notif']) ? $_GET['notif'] : false;

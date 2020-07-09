@@ -36,6 +36,13 @@
        <a class="active blue item" href="<?php echo BASE_URL."/index.php?page=tambah-cp&id=".$data['id'];  ?>">
          Tambah CP
        </a>
+       <a class="item" href="<?php echo BASE_URL."/index.php?page=daftar-hadir&id=".$data['id'];  ?>">
+         Daftar Hadir
+       </a>
+       <a class="item" href="<?php echo BASE_URL."/index.php?page=mulai-pilih&id=".$data['id'];  ?>">
+         Mulai Pilih
+       </a>
+
        <div class="right menu">
          <!-- <div class="item">
            <div class="ui icon input">
@@ -68,6 +75,7 @@
                   <th class='center aligned'>Pasangan Calon</th>
                   <th class='center aligned'>Visi Misi</th>
                   <th class='center aligned'>Edit</th>
+                  <th class='center aligned'>Delete</th>
                 </tr>
               </thead>";
       while($cp=mysqli_fetch_assoc($tabelcp)) {
@@ -77,9 +85,18 @@
                   <th class='center aligned'>$cp[nama_cp]</th>
                   <th class='center aligned'>$cp[visi_misi]</th>
                   <th class='center aligned'><a href='";
-                  echo BASE_URL."/index.php?page=edit-cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Edit</button></a></th>
+                  echo BASE_URL."/index.php?page=edit-cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Edit</button></a></th>";
+                  echo "<th class='center aligned'>
+                  <form class='ui form' action='function/proses_delete_cp.php' method='post' enctype='multipart/form-data'>
+                    <input type='hidden' name='no' value='$cp[no]'>
+                    <input class='ui blue button' type='submit' name='delete' value='Delete'>
+                  </form>
+                  <th>
                 </tr>
-              </tbody>";
+                  </tbody>";
+
+                  // echo "<a href='";
+                  // echo BASE_URL."/index.php?page=proses_delete_cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Delete</button></a></th>
         }
         echo "</table>";
       }

@@ -32,6 +32,13 @@
       <a class="item" href="<?php echo BASE_URL."/index.php?page=tambah-cp&id=".$data['id'];  ?>">
         Tambah CP
       </a>
+      <a class="item" href="<?php echo BASE_URL."/index.php?page=tambah-cp&id=".$data['id'];  ?>">
+        Daftar Hadir
+      </a>
+      <a class="item" href="<?php echo BASE_URL."/index.php?page=tambah-cp&id=".$data['id'];  ?>">
+        Mulai Pilih
+      </a>
+
       <div class="right menu">
         <!-- <div class="item">
           <div class="ui icon input">
@@ -45,11 +52,7 @@
       </div>
   </div>
     <div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <br><br><br><br><br>
     <div class="ui stackable three column grid">
       <div class="column"></div>
       <div class="column">
