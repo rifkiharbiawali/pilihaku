@@ -4,7 +4,7 @@ session_start();
 // $tabelcp = $_POST['tabelcp'];
 // $tabelhadir = $_POST['tabelhadir'];
 $id = $_SESSION['id'];
-$cp = "CREATE TABLE cp$id (no VARCHAR (20) NOT NULL, nama_cp VARCHAR (100) NOT NULL, visi_misi VARCHAR (1000) NOT NULL, foto VARCHAR (100) NOT NULL, PRIMARY KEY (no))";
+$cp = "CREATE TABLE cp$id (no VARCHAR (20) NOT NULL, nama_cp VARCHAR (100) NOT NULL, visi_misi VARCHAR (1000) NOT NULL, foto VARCHAR (100) NOT NULL, suara VARCHAR (1000) NOT NULL, PRIMARY KEY (no))";
 $hadir = "CREATE TABLE hd$id (id VARCHAR (20) NOT NULL, nama_pemilih VARCHAR (100) NOT NULL, keterangan VARCHAR (100) NOT NULL, PRIMARY KEY (id))";
 if ($_POST['buat']) {
   mysqli_query($koneksi, $cp);

@@ -40,6 +40,9 @@ if (isset($_GET['page'])) {
       case 'edit-cp':
       include_once("$page.php");
       break;
+      case 'daftar-hadir':
+      include_once("$page.php");
+      break;
 
     default:
       include_once('eror.php');

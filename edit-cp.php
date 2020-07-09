@@ -33,6 +33,12 @@
       <a class="active blue item" href="<?php echo BASE_URL."/index.php?page=tambah-cp&id=".$data['id'];  ?>">
         Tambah CP
       </a>
+      <a class="item" href="<?php echo BASE_URL."/index.php?page=daftar-hadir&id=".$data['id'];  ?>">
+        Daftar Hadir
+      </a>
+      <a class="item" href="<?php echo BASE_URL."/index.php?page=mulai-pilih&id=".$data['id'];  ?>">
+        Mulai Pilih
+      </a>
       <div class="right menu">
         <!-- <div class="item">
           <div class="ui icon input">
