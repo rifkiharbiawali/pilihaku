@@ -57,15 +57,21 @@
    <div class="ui stackable three column grid">
      <div class="column"></div>
      <div class="column">
-
-       <form class='ui form' action='function/proses_excel.php' method='post' enctype='multipart/form-data'>
-         <div class='field'>
-           <center><input class='ui blue button' type='file' name='upload_excel' value='Upload' accept='.xls'></center>
-         </div>
-         <div class="field">
-           <center><input class='ui blue button' type='submit' name='buat' value='Upload'></center>
-         </div>
-       </form>
+<?php
+if (mysqli_num_rows($cektabel) == 0) {
+?>
+<center>Tabel Belum Ada!!!!</center>
+<?php
+}else {
+?>
+<form class='ui form' action='function/proses_excel.php' method='post' enctype='multipart/form-data'>
+  <div class='field'>
+    <center><input class='ui blue button' type='file' name='upload_excel' value='Upload' accept='.xls'></center>
+  </div>
+  <div class="field">
+    <center><input class='ui blue button' type='submit' name='buat' value='Upload'></center>
+  </div>
+</form>
        <table class='ui unstackable table'>
          <thead>
            <tr>
@@ -91,13 +97,15 @@
                   // echo "<a href='";
                   // echo BASE_URL."/index.php?page=proses_delete_cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Delete</button></a></th>
         }
+
         echo "</table>";
-        echo " <form class='ui form' action='function/proses_deleteexcel.php' method='post'>
+
+        echo "<br> <form class='ui form' action='function/proses_deleteexcel.php' method='post'>
            <div class='field'>
              <center><input class='ui blue button' type='submit' name='hapushd' value='Delete'></center>
            </div>
          </form>";
-
+      }
        ?>
        <!-- <form class="ui form" action="function/proses_tambah.php" method="post" enctype="multipart/form-data">
           <div class="field">

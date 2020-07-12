@@ -59,7 +59,6 @@
      <div class="column"></div>
      <div class="column">
       <?php
-
       if (mysqli_num_rows($cektabel) == 0) {
         echo "<form class='ui form' action='function/proses_tambah.php' method='post' enctype='multipart/form-data'>
                 <div class='field'>
@@ -67,9 +66,9 @@
                 </div>
               </form>";
       }else {
-        echo "<table class='ui unstackable table'>";
-        echo "
-              <thead>
+        ?>
+        <table class='ui unstackable table'>
+          <thead>
                 <tr>
                   <th class='center aligned'>No</th>
                   <th class='center aligned'>Pasangan Calon</th>
@@ -77,30 +76,29 @@
                   <th class='center aligned'>Edit</th>
                   <th class='center aligned'>Delete</th>
                 </tr>
-              </thead>";
+              </thead>
+      <?php
       while($cp=mysqli_fetch_assoc($tabelcp)) {
         echo "<tbody>
                 <tr>
                   <td class='center aligned'>$cp[no]</td>
                   <td class='center aligned'>$cp[nama_cp]</td>
                   <td class='center aligned'>$cp[visi_misi]</td>
-                  <td class='center aligned'><a href='";
-                  echo BASE_URL."/index.php?page=edit-cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Edit</button></a></th>";
-                  echo "<td class='center aligned'>
+                  <td class='center aligned'><a href='".BASE_URL."/index.php?page=edit-cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Edit</button></a></td>
+                  <td class='center aligned'>
                   <form class='ui form' action='function/proses_delete_cp.php' method='post' enctype='multipart/form-data'>
                     <input type='hidden' name='no' value='$cp[no]'>
                     <input class='ui blue button' type='submit' name='delete' value='Delete'>
                   </form>
-                  <td>
+                  </td>
                 </tr>
                   </tbody>";
 
-                  // echo "<a href='";
-                  // echo BASE_URL."/index.php?page=proses_delete_cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Delete</button></a></th>
         }
         echo "</table>";
       }
        ?>
+
        <!-- <form class="ui form" action="function/proses_tambah.php" method="post" enctype="multipart/form-data">
           <div class="field">
             <center><input type="text" name="tabelcp" value="" placeholder="Nama Tabel CP" style="width:200px;">
