@@ -18,7 +18,7 @@
     <script src="style/semanticui/jquery-3.5.1.min.js"></script>
     <script src="style/semanticui/semantic.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <title>Ubah Profil</title>
+    <title>Ubah CP</title>
     <meta name="author" content="Rifki Harbi Awali">
     <link rel="icon" href="img/favicon.png">
   </head>
@@ -27,16 +27,16 @@
       <a class="item" href="<?php echo BASE_URL."/index.php" ?>">
         Beranda
       </a>
-      <a class="item" href="<?php echo BASE_URL."/index.php?page=edit-profile&id=".$data['id'];  ?>">
+      <a class="item" href="<?php echo BASE_URL."/index.php?page=edit-profile&id=".$_SESSION['id'];  ?>">
         Ubah Profil
       </a>
-      <a class="active blue item" href="<?php echo BASE_URL."/index.php?page=tambah-cp&id=".$data['id'];  ?>">
+      <a class="active blue item" href="<?php echo BASE_URL."/index.php?page=tambah-cp&id=".$_SESSION['id'];  ?>">
         Tambah CP
       </a>
-      <a class="item" href="<?php echo BASE_URL."/index.php?page=daftar-hadir&id=".$data['id'];  ?>">
+      <a class="item" href="<?php echo BASE_URL."/index.php?page=daftar-hadir&id=".$_SESSION['id'];  ?>">
         Daftar Hadir
       </a>
-      <a class="item" href="<?php echo BASE_URL."/index.php?page=mulai-pilih&id=".$data['id'];  ?>">
+      <a class="item" href="<?php echo BASE_URL."/index.php?page=mulai-pilih&id=".$_SESSION['id'];  ?>">
         Mulai Pilih
       </a>
       <div class="right menu">
@@ -52,11 +52,7 @@
       </div>
   </div>
     <div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <br><br><br><br><br>
     <div class="ui stackable three column grid">
       <div class="column"></div>
       <div class="column">

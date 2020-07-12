@@ -10,11 +10,9 @@ if ($_POST['buat']) {
   mysqli_query($koneksi, $cp);
   mysqli_query($koneksi, $hadir);
   mysqli_query($koneksi, "INSERT INTO nama_tabel (id, tabelcp, tabelhadir) VALUES ('$id', 'cp$id', 'hd$id')");
-  mysqli_query($koneksi, "INSERT INTO cp$id (no, nama_cp, visi_misi) VALUES ('1', 'Pasangan Calon', 'Visi-Misi')");
-  mysqli_query($koneksi, "INSERT INTO cp$id (no, nama_cp, visi_misi) VALUES ('2', 'Pasangan Calon', 'Visi-Misi')");
-  mysqli_query($koneksi, "INSERT INTO cp$id (no, nama_cp, visi_misi) VALUES ('3', 'Pasangan Calon', 'Visi-Misi')");
-  mysqli_query($koneksi, "INSERT INTO cp$id (no, nama_cp, visi_misi) VALUES ('4', 'Pasangan Calon', 'Visi-Misi')");
-  mysqli_query($koneksi, "INSERT INTO cp$id (no, nama_cp, visi_misi) VALUES ('5', 'Pasangan Calon', 'Visi-Misi')");
+  for ($i=1; $i<6; $i++) {
+    mysqli_query($koneksi, "INSERT INTO cp$id (no, nama_cp, visi_misi) VALUES ('$i', 'Pasangan Calon', 'Visi-Misi')");
+  }
   header("location:".BASE_URL."/index.php?page=tambah-cp&id=".$_SESSION['id']);
 }
  ?>

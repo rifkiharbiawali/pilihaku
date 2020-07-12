@@ -81,17 +81,17 @@
       while($cp=mysqli_fetch_assoc($tabelcp)) {
         echo "<tbody>
                 <tr>
-                  <th class='center aligned'>$cp[no]</th>
-                  <th class='center aligned'>$cp[nama_cp]</th>
-                  <th class='center aligned'>$cp[visi_misi]</th>
-                  <th class='center aligned'><a href='";
+                  <td class='center aligned'>$cp[no]</td>
+                  <td class='center aligned'>$cp[nama_cp]</td>
+                  <td class='center aligned'>$cp[visi_misi]</td>
+                  <td class='center aligned'><a href='";
                   echo BASE_URL."/index.php?page=edit-cp&id=$data[id]&no=$cp[no]'><button class='ui blue button'>Edit</button></a></th>";
-                  echo "<th class='center aligned'>
+                  echo "<td class='center aligned'>
                   <form class='ui form' action='function/proses_delete_cp.php' method='post' enctype='multipart/form-data'>
                     <input type='hidden' name='no' value='$cp[no]'>
                     <input class='ui blue button' type='submit' name='delete' value='Delete'>
                   </form>
-                  <th>
+                  <td>
                 </tr>
                   </tbody>";
 
